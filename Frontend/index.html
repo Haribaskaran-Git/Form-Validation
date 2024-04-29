@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="info">
+    <h1>Student Registration form</h1>
+    <Form id="stu_form">
+        <label for="stuname">Student Name:</label>
+        <input name="stuname" required id="stuname" type="text"/>
+        <label for="stumail">Student Mail:</label>
+        <input name="stumail" required id="stumail" type="email"/>
+        <label for="stumob">Mobile Number:</label>
+        <input name="stumob" required id="stumob" type="teL"/>
+        <label for="gender">Gender:</label>
+        <input name="gender" required id="gender" type="text"/>
+        <label for="dob">Date of birth:</label>
+        <input name="dob" required id="dob" type="date"/>
+        <label for="dateofjoining">Date of Joining:</label>
+        <input name="dateofjoining" required id="dateofjoining" type="date"/>
+        <label for="qualification">Course:</label>
+        <input name="qualification" required id="qualification" type="text"/>
+        <label for="year1">Current year:</label>
+        <input name="year1" required id="year1" type="number"/>
+        
+        <button onsubmit="submitform()">Register User</button>
+    
+    </Form>
+    <div id="main1">
+    <a id="nextpage" href="./data.html">
+        <h3>Student Details</h3></a>
+    </div>
+</div>
+    <script src="./index.js"></script>
+</body>
+</html>

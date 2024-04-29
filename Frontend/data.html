@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student Details</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Student Mail</th>
+                <th>Mobile Number</th>
+                <th>Gender</th>
+                <th>Dob</th>
+                <th>Current year</th>
+                <th>Course</th>
+               <th>Date of Joining</th>
+               
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+<div id="main"></div>
+<script>
+    async function getdata(){
+        let datas=await fetch("http://localhost:3000/get",{
+             method:"GET",
+         });
+         let data=await datas.json();
+         console.log(data);
+         const elem=document.getElementById("main");
+         const elem2=document.querySelector("tbody");
+        let content="";
+        data.forEach(item => {
+            content+=`
+            <tr>
+            <td>${item.stu_name}</td>
+            <td>${item.stu_mail}</td>
+            <td>${item.stu_mob}</td>
+            <td>${item.gender}</td>
+            <td>${item.dob}</td>
+            <td>${item.year1}</td>
+            <td>${item.qualification}</td>
+            <td>${item.dateofjoining}</td>
+            </tr>
+            `
+        });
+        elem2.innerHTML=content;
+    }
+    
+    
+    
+    
+        getdata()
+
+</script>
+</body>
+</html>

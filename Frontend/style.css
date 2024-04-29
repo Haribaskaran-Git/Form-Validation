@@ -1,0 +1,31 @@
+#stu_from{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+h1{
+    font-size:36pt;
+    color: brown;
+}
+input{
+    display:block;
+    margin-top:8px;
+}
+#nextpage{
+    text-decoration: none;
+    display: flex;
+    color:brown;
+    margin-top: 5px;
+}
+#info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    flex-direction: column;
+    
+}
